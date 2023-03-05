@@ -1,0 +1,206 @@
+@import "rc-tabs/assets/index.css";
+
+.rc-tabs-nav {
+
+}
+
+.rc-tabs-nav-list {
+  @apply pl-7;  
+}
+
+.rc-tabs {
+  @apply border-none select-none;
+}
+
+.rc-tabs-nav-list {
+
+}
+
+.rc-tabs-top {
+  @apply pt-2;
+}
+
+.rc-tabs-content-holder {
+  @apply absolute left-0 right-0 top-[80px] bottom-0 bg-white border-[1.5px] border-t border-b-0 border-l-0 border-r-0 border-[#C7C7C5] select-all overflow-hidden rounded-b-lg overflow-hidden;
+}
+.rc-tabs-tab {
+  @apply bg-toolbar-bg rounded-t-lg rounded-b-lg text-xs font-normal min-w-[140px] flex flex-row cursor-default;
+}
+
+.rc-tabs-tab {
+  @apply z-10;
+}
+.rc-tabs-tab-btn {
+}
+.rc-tabs-tab:hover {
+  @apply z-30;
+}
+.rc-tabs-tab-active,
+.rc-tabs-tab-active:hover {
+  @apply z-30;
+}
+
+.rc-tabs-tab:hover {
+  @apply bg-[#E5E0D5];
+}
+
+.rc-tabs-tab-btn {
+  @apply flex-grow min-w-[140px] w-fit;
+}
+
+.rc-tabs-tab-remove {
+  transform: translateX(-8px);
+}
+
+.rc-tabs-tab .rc-tabs-tab-remove {
+  @apply z-10 flex items-center justify-center w-[18px] h-[18px] rounded-full bg-toolbar-fg/0 pb-[2px] text-[17px] text-[#1F2124] cursor-default;
+  content: '×';
+}
+
+
+.rc-tabs-tab .rc-tabs-tab-remove:hover {
+  @apply bg-[#CFCDC6] text-[#1F2124];
+}
+
+
+/* text face effect */
+.rc-tabs-tab .rc-tabs-tab-remove {
+  @apply bg-toolbar-bg;
+  box-shadow: -8px 0px 8px 4px rgba(221, 214, 198,1);
+}
+.rc-tabs-tab:hover .rc-tabs-tab-remove {
+  @apply bg-toolbar-hover;
+  box-shadow: -8px 0px 8px 4px rgba(229, 224, 213,1);
+}
+.rc-tabs-tab:hover.rc-tabs-tab-active .rc-tabs-tab-remove,
+.rc-tabs-tab-active .rc-tabs-tab-remove {
+  @apply bg-toolbar-fg;
+  box-shadow: -8px 0px 8px 4px rgba(247, 246, 243,1);
+}
+
+/* selected tab */
+.rc-tabs-tab.rc-tabs-tab-active {
+  @apply bg-toolbar-fg font-normal;
+}
+
+/* close button for unselected tabs */
+.rc-tabs-tab.rc-tabs-tab-active button.rc-tabs-tab-remove:hover {
+  @apply bg-[#D9D8D5];
+}
+
+/* all tabs have a left border */
+.rc-tabs-tab .rc-tabs-tab-btn {
+  @apply leading-[20px] border-solid border-l-gray-900/50 border-l pl-2 transition-all duration-200;
+}
+
+/* hide separator around for the first tab, and around an active tab */
+.rc-tabs-tab:hover .rc-tabs-tab-btn,
+.rc-tabs-tab:hover + .rc-tabs-tab .rc-tabs-tab-btn,
+.rc-tabs-tab.rc-tabs-tab-active .rc-tabs-tab-btn,
+.rc-tabs-tab.rc-tabs-tab-active + .rc-tabs-tab .rc-tabs-tab-btn,
+.rc-tabs-tab:first-child .rc-tabs-tab-btn {
+  @apply border-l-gray-800/0;
+}
+
+
+/* ---- INNER PADDINGS ------*/
+.rc-tabs-tab {
+  @apply pr-[14px];
+}
+
+.rc-tabs-tab-active {
+  @apply pr-[14px];
+}
+
+/* --------------- LEFT CORNER FOREGROUND -------------- */
+.rc-tabs-tab .rc-tabs-tab-btn::before {
+  content: ' ';
+  @apply absolute w-[10px] h-[10px] bg-toolbar-bg ml-[-19px] mt-[16px] rounded-br-lg;
+}
+.rc-tabs-tab:hover .rc-tabs-tab-btn::before {
+  @apply bg-toolbar-bg;
+}
+
+
+/* exception for when the left tab is active */
+.rc-tabs-tab-active + .rc-tabs-tab .rc-tabs-tab-btn::before {
+  @apply absolute w-[10px] h-[10px] bg-toolbar-bg ml-[-9px] mt-[16px] rounded-br-none rounded-bl-lg;
+}
+.rc-tabs-tab-active + .rc-tabs-tab:hover::before {
+  @apply bg-toolbar-fg;
+}
+
+.rc-tabs-tab-active + .rc-tabs-tab:hover .rc-tabs-tab-btn::before {
+  @apply bg-toolbar-hover;
+}
+
+/* TODO: this one should depend on the current hover (use JS?) */
+.rc-tabs-tab-active:hover .rc-tabs-tab-btn::before,
+.rc-tabs-tab-active .rc-tabs-tab-btn::before {
+  @apply bg-toolbar-bg;
+}
+
+.rc-tabs-tab:hover + .rc-tabs-tab-active .rc-tabs-tab-btn::before {
+  @apply bg-toolbar-hover;
+}
+
+/* --------------- LEFT CORNER BACKGROUND -------------- */
+.rc-tabs-tab::before {
+  content: ' ';
+  @apply absolute w-[18px] h-[10px] bg-toolbar-bg ml-[-10px] mt-[22px];
+}
+.rc-tabs-tab:hover::before {
+  @apply bg-toolbar-hover;
+}
+.rc-tabs-tab-active:hover::before,
+.rc-tabs-tab-active::before {
+  @apply bg-toolbar-fg;
+}
+
+/* --------------- LEFT CORNER FOREGROUND -------------- */
+.rc-tabs-tab::after {
+  content: ' ';
+  @apply z-10 w-[10px] h-[10px] bg-toolbar-bg mr-[-24px] mt-[22px] rounded-bl-lg;
+}
+
+.rc-tabs-tab:hover::after {
+  @apply bg-toolbar-bg;
+}
+.rc-tabs-tab-active:hover::after,
+.rc-tabs-tab-active::after {
+ @apply bg-toolbar-bg;
+}
+
+.rc-tabs-nav-list:hover .rc-tabs-tab:not(:hover)::after {
+  @apply bg-toolbar-bg;
+}
+
+/* --------------- RIGHT CORNER BACKGROUND -------------- */
+.rc-tabs-tab .rc-tabs-tab-remove::after {
+  content: ' ';
+  @apply absolute w-[16px] h-[10px] bg-toolbar-bg mr-[-30px] mt-[25px] rounded-tl-md;
+}
+
+.rc-tabs-tab:hover .rc-tabs-tab-remove::after {
+  @apply  bg-toolbar-hover;
+}
+
+.rc-tabs-tab-active:hover .rc-tabs-tab-remove::after,
+.rc-tabs-tab-active .rc-tabs-tab-remove::after {
+  @apply  bg-toolbar-fg;
+}
+
+.rc-tabs-ink-bar {
+  display: none;
+}
+
+.rc-tabs-ink-bar-animated {
+
+}
+
+.rc-tabs-nav-add {
+  @apply w-7 h-7 rounded-full bg-transparent border-0 z-30 ml-2 text-[21px] pb-7 leading-[25px] text-[#4E4E4D];
+}
+.rc-tabs-nav-add:hover {
+  @apply  bg-gray-900/20;
+}

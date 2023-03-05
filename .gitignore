@@ -1,0 +1,9 @@
+# ide caches
+.vscode/
+.idea/
+
+# node download folder
+node_modules/
+
+# system cache
+.DS_Store
