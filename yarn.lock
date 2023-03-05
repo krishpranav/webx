@@ -5297,7 +5297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:^6.5.15":
+"@storybook/react@npm:^6.5.16":
   version: 6.5.16
   resolution: "@storybook/react@npm:6.5.16"
   dependencies:
@@ -22756,7 +22756,7 @@ __metadata:
     "@storybook/addon-links": ^6.5.15
     "@storybook/builder-webpack5": ^6.5.15
     "@storybook/manager-webpack5": ^6.5.15
-    "@storybook/react": ^6.5.15
+    "@storybook/react": ^6.5.16
     "@storybook/testing-library": ^0.0.13
     "@tauri-apps/api": ^1.1.0
     "@tauri-apps/cli": ^1.1.0
