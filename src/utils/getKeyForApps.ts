@@ -1,3 +1,4 @@
-import { App, AppTab } from "../types";
+import { App, AppTab } from '../types'
 
-export const getKey = (apps: Array<AppTab | App> = []) => apps.map((id) => id)
+export const getKeyForApps = (apps: Array<AppTab | App> = []) =>
+  apps.map((id) => id).join(',')
