@@ -10,7 +10,7 @@ import { getKeyForApps } from '../../utils/getKeyForApps'
 export const getEmptyTab = (app?: Partial<AppTab>) =>
   ({
     id: uuidv4(),
-    title: '☊ Latent Search',
+    title: 'WebX Search',
     subtitle: '',
     prompt: '',
     tasks: {},
@@ -36,7 +36,7 @@ const Tabs = () => {
         .map((app) => ({ ...app, isActive: false }))
         .concat({
           id: uuidv4(),
-          title: '☊ Latent Search',
+          title: 'WebX Search',
           subtitle: '',
           prompt: '',
           tasks: {},

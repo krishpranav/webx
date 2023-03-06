@@ -30,7 +30,7 @@
           "icons/icon.ico"
         ],
         "identifier": "com.datagica.webx",
-        "longDescription": "Latent web browser",
+        "longDescription": "webx browser",
         "macOS": {
           "entitlements": null,
           "exceptionDomain": "",
@@ -39,7 +39,7 @@
           "signingIdentity": null
         },
         "resources": [],
-        "shortDescription": "Latent web browser",
+        "shortDescription": "webx browser",
         "targets": "all",
         "windows": {
           "certificateThumbprint": null,
@@ -59,7 +59,7 @@
           "fullscreen": false,
           "height": 600,
           "resizable": true,
-          "title": "Latent Web Explorer 🔮",
+          "title": "Webx Explorer 🔮",
           "decorations": false,
           "transparent": true,
           "width": 800
