@@ -3,7 +3,7 @@ import { writeTextFile } from '@tauri-apps/api/fs'
 
 export const downloadHtmlFile = async (html: string) => {
   try {
-    const fileName = `web4-${Date.now()}.html`
+    const fileName = `webx-${Date.now()}.html`
 
     console.log('opening save dialog..')
     const filePath = await save({
